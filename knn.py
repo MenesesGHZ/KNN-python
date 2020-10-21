@@ -3,13 +3,13 @@ class KNN():
         self.X = X 
         self.Y = Y
         self.norm = norm
-        self.k = 3
+        self.k = k
 
     def load_data(self,X,Y,norm,k=3):
         self.X = X 
         self.Y = Y
         self.norm = norm
-        self.k = 3
+        self.k = k
     
     def predict(self,X):
         predictions = list()
