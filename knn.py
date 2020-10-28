@@ -4,13 +4,7 @@ class KNN():
         self.Y = Y
         self.norm = norm
         self.k = k
-
-    def load_data(self,X,Y,norm,k=3):
-        self.X = X 
-        self.Y = Y
-        self.norm = norm
-        self.k = k
-    
+ 
     def predict(self,X):
         predictions = list()
         for x in X:
@@ -25,9 +19,10 @@ class KNN():
             neighbours_distance_index = sorted(neighbours_distance_index)
             k_nearest_neighbours = neighbours_distance_index[:self.k]
 
-            # Getting the label of the 'k' nearest neighbours 
-            k_neighbours_label = [self.Y[index][0] for _,index in k_nearest_neighbours]
-
+            # Getting the label of the 'k' nearest neighbours
+                # if the label is a string, save the whole label name; else it MUST be numeric, save the number of the class which belongs too. 
+            k_neighbours_label = [self.Y[index] if isinstance(self.Y[index],str) else self.Y[index][0] for _,index in k_nearest_neighbours ]
+            print(k_neighbours_label)
             # `Predicting`
             labels = list(set(k_neighbours_label))
             max_count = 0
