@@ -1,7 +1,7 @@
 import numpy as np
 import math
 from knn import KNN
-from graphs import display_knn_graph
+from graphs import display_knn_test_graph
 
 def test():
     # Dataset -> Labeled Examples 
@@ -42,6 +42,6 @@ def test():
                         "blue":"rgba(0, 255, 255,0.9)",
                         "blue_pred":"rgba(0,0,255,0.75)",
                         "orange_pred":"rgba(255,70,0,0.8)"}
-    display_knn_graph(X,Y,random_points,predictions,category_names,category_colors)
+    display_knn_test_graph(X,Y,random_points,predictions,category_names,category_colors)
 
 

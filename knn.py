@@ -22,7 +22,6 @@ class KNN():
             # Getting the label of the 'k' nearest neighbours
                 # if the label is a string, save the whole label name; else it MUST be numeric, save the number of the class which belongs too. 
             k_neighbours_label = [self.Y[index] if isinstance(self.Y[index],str) else self.Y[index][0] for _,index in k_nearest_neighbours ]
-            print(k_neighbours_label)
             # `Predicting`
             labels = list(set(k_neighbours_label))
             max_count = 0
