@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js" integrity="sha512-rKFvwjvE4liWPlFnvH4ZhRDfNZ9FOpdkD/BU5gAIA3VS3vOQrQ5BjKgbO3kxebKhHdHcNUHLqxQYSoxee9UwgA==" crossorigin="anonymous"></script>
+		<script src="./src/js/index.js"></script>
+		<title>Document</title>
+	</head>
+	<header >
+		<nav class="navbar navbar-light bg-light">
+			<a class="navbar-brand" href="/">
+				<img src="./src/assets/imgs/single_knn.png" width="30" height="30" class="d-inline-block align-top" alt="">
+				KNN Live Interaction
+			</a>
+		</nav>
+	</header>
+
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-12 d-flex align-items-center justify-content-center" id="knn-graph">
+					<p>KNN_GRAPH</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-3" id="knn-classes">
+					<div class="row" id="knn-class-1">
+						<p>Class 1</p>
+					</div>
+					<div class="row" id="knn-class-2">
+						<p>Class 2</p>
+					</div>
+				</div>
+				<div class="col-9" id="dataset">
+					<input type="file" name="dataset-input" id="dataset-input">
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="button" id="scan-dataset">
+				Scan Dataset
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-12" id="knn-board">
+				SELECT_NEW_INSTANCE
+			</div>
+		</div>
+
+	</body>
+
+	<footer>
+
+	</footer>
+
+
+</html>
